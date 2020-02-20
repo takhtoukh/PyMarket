@@ -43,4 +43,3 @@ def get_nearest_markets(user_lat, user_lng):
 
     result = sorted(result, key=itemgetter('distance'))
     return result[:20]
-
