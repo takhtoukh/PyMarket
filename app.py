@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request
 import market
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def index():
     return render_template("index.html")
 
 
-@app.route('/resultat', methods=['POST'])
+@application.route('/resultat', methods=['POST'])
 def resultat():
     result = request.form
     latitude = result['latitude']
@@ -20,4 +20,4 @@ def resultat():
 
 
 if __name__ == "__main__":
-    app.run()
+    application.run()
